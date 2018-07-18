@@ -1,0 +1,303 @@
+$background: #02050f;
+$primaria: #f74c4f;
+$secundaria: #33eaa2;
+$roxo: #d91eb1;
+$laranja: #f55523;
+$foreground: #b8bcc7;
+$highlight: #ffffff;
+$bpDesktop: 960px;
+$bpTablet: 780px;
+$bpMobile: 480px;
+$espacamentoPequeno: 30px;
+
+@import "reset";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800");
+* {
+  box-sizing: border-box;
+}
+body {
+  background: $background;
+  color: $foreground;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  a {
+    color: $highlight;
+    text-decoration: unset;
+  }
+}
+
+
+.botao {
+  display: inline-block;
+  padding: 20px;
+  border: 2px solid $primaria;
+  text-transform: uppercase;
+  font-size: 0.65em;
+  font-weight: 600;
+
+  &.botao--roxo {
+    border-color: $roxo;
+  }
+
+  &.botao--laranja {
+    border-color: $laranja;
+  }
+}
+
+.botao--destaque {
+  border-color: $secundaria;
+  position: relative;
+  z-index: 2;
+  margin: 40px 0;
+  transition: all 0.3s;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    border-top: 2px solid $primaria;
+    left: -40%;
+    z-index: -1;
+    transform: rotate(-30deg);
+    transition: all 0.3s;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    border-top: 2px solid $primaria;
+    left: 70%;
+    z-index: -1;
+    transform: rotate(-30deg);
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    color: $highlight;
+    text-decoration: none;
+    background: rgba($color: $highlight, $alpha: 0.05);
+    border-color: $primaria;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 80%;
+      border-top: 2px solid $primaria;
+      left: -40%;
+      z-index: -1;
+      transform: rotate(-30deg) translateY(-30px);
+      transition: all 0.3s;
+    }
+
+    &:after {
+      content: "";
+      left: 70%;
+      transform: rotate(-30deg) translateY(30px);
+    }
+  }
+}
+
+.navbar-brand {
+  color: $primaria;
+  border: 3px solid $primaria;
+  border-radius: 50%;
+  padding: 0.5em;
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+.nav-item {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  a {
+    padding: 1em;
+    opacity: 0.6;
+  }
+
+  &:last-child {
+    a {
+      padding-right: 0;
+    }
+  }
+
+  a:hover {
+    opacity: 1;
+    color: $highlight;
+  }
+}
+
+.nav-item.active {
+  position: relative;
+  &::before {
+    content: "";
+
+    bottom: 0;
+    border: 4px solid $primaria;
+    width: 90px;
+    height: 400px;
+    position: absolute;
+    transform: rotate(-27deg) translate(-130px, -20px);
+    z-index: -1;
+    transform-origin: center;
+  }
+  a {
+    opacity: 1;
+    font-weight: 700;
+  }
+}
+.menu__right {
+  float: right;
+}
+
+.titulo {
+  color: $primaria;
+  font-weight: lighter;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin: 1em 0;
+
+  strong {
+    font-weight: 500;
+  }
+}
+
+.subtitulo {
+  color: $highlight;
+  font-weight: 500;
+  font-size: 1.3em;
+}
+
+p {
+  line-height: 1.5em;
+  font-weight: 300;
+}
+
+.sobre {
+  min-height: 100vh;
+  p {
+    padding: 2em 0;
+  }
+}
+
+.trabalho__titulo {
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  &.trabalho__titulo--roxo {
+    color: $roxo;
+  }
+
+  &.trabalho__titulo--laranja {
+    color: $laranja;
+  }
+}
+
+.trabalho__empresa {
+  display: block;
+  opacity: 0.4;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+
+  &.trabalho__empresa--roxo {
+    color: $roxo;
+  }
+
+  &.trabalho__empresa--laranja {
+    color: $laranja;
+  }
+}
+
+.trabalho__tecnologias {
+  opacity: 0.4;
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+
+.trabalho__descricao {
+  margin: 2rem 0;
+}
+
+.experiencia{
+    margin: 1rem 0;
+}
+.experiencia__titulo {
+  /* janeiro 2018 - prese: */
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: $highlight;
+}
+
+.experiencia__periodo {
+  /* Desenvolvedor Full S: */
+  opacity: 0.5;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $primaria;
+  text-transform: uppercase;
+  display: block;
+}
+
+.experiencia__empresa {
+  /* Grupo Flatbox: */
+  opacity: 0.7;
+  font-size: 0.9rem;
+  font-size: 600;
+  color: $highlight;
+}
+
+.contato--redes-sociais{
+    ul.row{
+        padding:0;
+    }
+}
+
+.rede-social__link {
+  /* williamxsp: */
+  font-size: 0.8rem;
+  color: #ffffff;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 1rem;
+  padding-left: 50px;
+  background: url(../img//social.svg) no-repeat left top;
+  height: 32px;
+  display: block;
+
+  &:hover{
+      color:$highlight;
+      text-decoration: none;
+  }
+  .rede-social__nome {
+    padding-top: 2px;
+  }
+
+  &.rede-social__link--linkedin {
+    background-position:0 0;
+  }
+  &.rede-social__link--twitter {
+    background-position:0 -64px;
+  }
+  &.rede-social__link--behance {
+    background-position:0 -32px;
+  }
+}
+.rede-social__nome {
+  opacity: 0.8;
+  display: block;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

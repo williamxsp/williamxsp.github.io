@@ -1,38 +1,184 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>William Martins - Product Owner & Desenvolvedor Web</title>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.css">
-	
-	
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/main.css">
+  <title>William Martins - Desenvolvedor Full Stack</title>
 </head>
+
 <body>
-	<div id="background"></div>
-	<div class="container-fluid">
-		<section id="main" class="col-xs-12  col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
-		<header>
-			<picture><img src="img/me.jpg" alt=""></picture>
-			<h1>William Martins</h1>
-			<p>Product Owner & Web Developer</p>
-			<ul>
-				<li>
-					<a class="btn btn-link" href="https://www.linkedin.com/in/williamxsp" target="_BLANK">LinkedIn</a>
-				</li>
-				<li>
-					<a class="btn btn-link" href="https://twitter.com/williamxsp" target="_BLANK">Twitter</a>
-				</li>
-				<li>
-					<a class="btn btn-link" href="https://fb.com/williamxsp" target="_BLANK">Facebook</a>
-				</li>
-			</ul>
-		</header>
-	</section>
-	</div>
+  <nav class="navbar fixed-top navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">W</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#sobre">Sobre
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#trabalhos">Trabalhos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experiencia">Experiência</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <header id="sobre" class="sobre row">
+
+      <div class="sobre__conteudo col-12 col-md-7 align-self-center">
+        <h1 class="titulo">
+          <strong>William</strong> Martins</h1>
+        <h2 class="subtitulo">Desenvolvedor full stack & UI Designer</h2>
+        <p>Lorem ipsum dolor sit amet
+          <a href="#">consectetur</a> adipisicing elit. Neque praesentium, error nemo fuga ipsum facilis vero cupiditate a? Perferendis
+          quis illum minima eligendi. Vel libero aliquid aspernatur sint aperiam nam!</p>
+        <div class="text-center text-sm-left">
+          <a href="#trabalhos" class="botao botao--destaque">Conheça meu trabalho</a>
+        </div>
+      </div>
+      <div class="sobre__imagem offset-1 col-4 align-self-center d-none d-md-block">
+        <img class="img-fluid" src="img/eu.png" alt="William Martins">
+      </div>
+    </header>
+    <section id="trabalhos">
+      <header>
+
+      </header>
+      <article class="trabalho trabalho--app trabalho--roxo trabalho--conteudo-a-esquerda row">
+        <div class="trabalho__conteudo col-12 col-md-5 offset-md-1">
+          <header>
+            <h3 class="trabalho__titulo trabalho__titulo--roxo">
+              <small class="trabalho__empresa trabalho__empresa--roxo">2018 - Flatbox</small>
+              Elenco Digital
+            </h3>
+            <h4 class="trabalho__tecnologias trabalho__tecnologias--roxo">Angular, Firebase, Ionic</h4>
+          </header>
+          <p class="trabalho__descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl est, pharetra quis vestibulum ut, mollis tempor
+            lectus.
+          </p>
+          <a href="#" class="botao botao--roxo"> Baixe o App</a>
+        </div>
+
+        <div class="trabalho__imagem offset-1 col-4">
+          <figure>
+            <img class="img-fluid" src="img/celular.png" alt="">
+            <figcaption class="d-none">Legenda</figcaption>
+          </figure>
+        </div>
+
+      </article>
+
+      <article class="trabalho trabalho--app trabalho--laranja trabalho--conteudo-a-esquerda row">
 
 
+        <div class="trabalho__imagem col-4">
+          <figure>
+            <img class="img-fluid" src="img/celular.png" alt="">
+            <figcaption class="d-none">Legenda</figcaption>
+          </figure>
+        </div>
+
+        <div class="trabalho__conteudo col-12 col-md-5 offset-md-2">
+          <header>
+            <h3 class="trabalho__titulo trabalho__titulo--laranja">
+              <small class="trabalho__empresa trabalho__empresa--laranja">2016 - Educar</small>
+              SENAI
+            </h3>
+            <h4 class="trabalho__tecnologias trabalho__tecnologias--laranja">Angular, Firebase, Ionic</h4>
+          </header>
+          <p class="trabalho__descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl est, pharetra quis vestibulum ut, mollis tempor
+            lectus.
+          </p>
+          <a href="#" class="botao botao--laranja"> Baixe o App</a>
+        </div>
+
+
+
+      </article>
+    </section>
+
+    <section id="experiencia" class="row">
+      <h3 class="titulo col-12">Experiência</h3>
+      <article class="experiencia col-12 col-sm-6 col-md-4">
+        <header>
+          <h4 class="experiencia__titulo">
+            <small class="experiencia__periodo">Janeiro 2018 - Presente</small>
+            Desenvolvedor Full Stack
+          </h4>
+          <p class="experiencia__empresa">Grupo Flatbox</p>
+        </header>
+      </article>
+      <article class="experiencia col-12 col-sm-6 col-md-4">
+        <header>
+          <h4 class="experiencia__titulo">
+            <small class="experiencia__periodo">Janeiro 2018 - Presente</small>
+            Desenvolvedor Full Stack
+          </h4>
+          <p class="experiencia__empresa">Grupo Flatbox</p>
+        </header>
+      </article>
+      <article class="experiencia col-12 col-sm-6 col-md-4">
+        <header>
+          <h4 class="experiencia__titulo">
+            <small class="experiencia__periodo">Janeiro 2018 - Presente</small>
+            Desenvolvedor Full Stack
+          </h4>
+          <p class="experiencia__empresa">Grupo Flatbox</p>
+        </header>
+      </article>
+    </section>
+    <section id="contato" class="row">
+      <h3 class="titulo col-12">Contato</h3>
+      <article class="contato--redes-sociais col-12 col-sm-3">
+        <ul class="row">
+          <li class=" col-4 col-sm-12 px-0">
+            <a href="#linkedin" class="rede-social__link rede-social__link--linkedin">
+              <small class="rede-social__nome">LinkedIn</small>
+              Williamxsp
+            </a>
+          </li>
+          <li class=" col-4 col-sm-12 px-0">
+            <a href="#behance" class="rede-social__link rede-social__link--behance">
+              <small class="rede-social__nome">LinkedIn</small>
+              Williamxsp
+            </a>
+          </li>
+          <li class=" col-4 col-sm-12 px-0">
+            <a href="#twitter" class="rede-social__link rede-social__link--twitter">
+              <small class="rede-social__nome">LinkedIn</small>
+              Williamxsp
+            </a>
+          </li>
+        </ul>
+      </article>
+      <article class="contato--mensagem col-12 col-sm-9 offset-md-2">
+        <p>I’m always interested in new opportunities, freelance work, and collaborations. Email is the best way to reach me.
+          Message me (
+          <a href="#">williamxsp[@]gmail.com</a> ) if you'd like to work together.</p>
+        <a href="#" class="botao botao--destaque">Entre em Contato</a>
+      </article>
+    </section>
+
+  </div>
+  <div id="particles-js"></div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="js/main.js"></script>
+
 </html>
