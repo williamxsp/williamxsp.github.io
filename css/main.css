@@ -121,7 +121,7 @@ body {
   padding: 0.5em; }
 
 .navbar {
-  background-color: transparent; }
+  background-color: #02050f; }
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
@@ -176,7 +176,8 @@ p {
   font-weight: 300; }
 
 .sobre {
-  min-height: 100vh; }
+  min-height: 90vh;
+  padding: 10vh 0; }
   .sobre p {
     padding: 2em 0; }
 
@@ -188,6 +189,28 @@ p {
     color: #d91eb1; }
   .trabalho__titulo.trabalho__titulo--laranja {
     color: #f55523; }
+
+.trabalho__imagem {
+  position: relative;
+  transform: translateY(20px); }
+
+.trabalho__sombra {
+  z-index: -1;
+  position: relative;
+  display: block; }
+  .trabalho__sombra:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.7);
+    filter: blur(20px);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    left: 20%;
+    margin: 0 auto;
+    position: absolute; }
+
+.trabalho {
+  padding: 3rem 0; }
 
 .trabalho__empresa {
   display: block;

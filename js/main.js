@@ -3,6 +3,10 @@ window.onload = () => {
         console.log('callback - particles.js config loaded');
       });
 
+      var rellax = new Rellax('.rellax', {
+        //   center:true
+      });
+
     //   let linksMenu = document.querySelectorAll("nav a");
     //   linksMenu.forEach(a => {
         // a.addEventListener("click", function(evt){

@@ -105,7 +105,7 @@ body {
 }
 
 .navbar {
-  background-color: transparent;
+  background-color: rgba($color: $background, $alpha: 1);
 }
 
 .navbar-toggler-icon {
@@ -179,7 +179,8 @@ p {
 }
 
 .sobre {
-  min-height: 100vh;
+  min-height: 90vh;
+  padding: 10vh 0;
   p {
     padding: 2em 0;
   }
@@ -197,7 +198,34 @@ p {
     color: $laranja;
   }
 }
+.trabalho__imagem{
+    position: relative;
+    transform: translateY(20px);
+}
 
+.trabalho__sombra{
+    z-index: -1;
+    position: relative;
+    display: block;
+
+    &:before{
+        content:"";
+        background: rgba(0, 0, 0, 0.7);
+        filter: blur(20px);
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        // top:-100%;
+        left: 20%;
+        margin:0 auto;
+        position: absolute;
+    }
+
+}
+
+.trabalho{
+    padding: 3rem 0;
+}
 .trabalho__empresa {
   display: block;
   opacity: 0.4;
