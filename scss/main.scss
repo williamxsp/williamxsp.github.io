@@ -1,6 +1,6 @@
 $background: #02050f;
 $primaria: #f74c4f;
-$secundaria: #33eaa2;
+$secundaria: #D1E751;
 $roxo: #d91eb1;
 $laranja: #f55523;
 $foreground: #b8bcc7;
@@ -9,11 +9,15 @@ $bpDesktop: 960px;
 $bpTablet: 780px;
 $bpMobile: 480px;
 $espacamentoPequeno: 30px;
+$quasePreto:#01040a;
 
 @import "reset";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800");
 * {
   box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   background: $background;
@@ -24,7 +28,15 @@ body {
   a {
     color: $highlight;
     text-decoration: unset;
+
+    &:hover{
+      color:$highlight;
+    }
   }
+}
+
+section{
+  padding: 3rem 0;
 }
 
 
@@ -102,10 +114,28 @@ body {
   border: 3px solid $primaria;
   border-radius: 50%;
   padding: 0.5em;
+  line-height: 1.5rem;
+  width:3rem;
+  height: 3rem;
 }
 
 .navbar {
-  background-color: rgba($color: $background, $alpha: 1);
+  background-color: $quasePreto;//rgba($color: $background, $alpha: 1);
+  ul{
+    position: relative;
+  }
+  .navbar-item-active-status {
+    opacity: 0;
+    bottom: 0;
+    border: 4px solid $primaria;
+    width: 90px;
+    height: 400px;
+    position: absolute;
+    transform: rotate(-27deg) translate(-130px, -20px);
+    z-index: -1;
+    transform-origin: center;
+    transition: all 0.2s linear;
+  }
 }
 
 .navbar-toggler-icon {
@@ -133,19 +163,7 @@ body {
 }
 
 .nav-item.active {
-  position: relative;
-  &::before {
-    content: "";
-
-    bottom: 0;
-    border: 4px solid $primaria;
-    width: 90px;
-    height: 400px;
-    position: absolute;
-    transform: rotate(-27deg) translate(-130px, -20px);
-    z-index: -1;
-    transform-origin: center;
-  }
+  
   a {
     opacity: 1;
     font-weight: 700;
@@ -200,7 +218,7 @@ p {
 }
 .trabalho__imagem{
     position: relative;
-    transform: translateY(20px);
+    transform: translateY(-120px);
 }
 
 .trabalho__sombra{
@@ -224,7 +242,7 @@ p {
 }
 
 .trabalho{
-    padding: 3rem 0;
+    padding: 3rem 0 6rem;
 }
 .trabalho__empresa {
   display: block;
@@ -292,9 +310,9 @@ p {
   color: #ffffff;
   font-weight: 400;
   text-transform: uppercase;
-  margin: 1rem;
-  padding-left: 50px;
-  background: url(../img//social.svg) no-repeat left top;
+  margin-bottom: 2rem;
+  // padding-left: 50px;
+  // background: url(../img//social.svg) no-repeat left top;
   height: 32px;
   display: block;
 
